@@ -58,6 +58,7 @@ Retorna um usuário específico pelo id.
 ## ⚡ Tratamento de Erros
 Todos os erros passam pelo middleware de erro (errorMiddleware.ts) e seguem o padrão:
 
+```
 {
   "error": {
     "code": "VALIDATION_ERROR",
@@ -65,6 +66,7 @@ Todos os erros passam pelo middleware de erro (errorMiddleware.ts) e seguem o pa
     "details": ["Page must be a valid number"]
   }
 }
+```
 
 📝 Observações
 
