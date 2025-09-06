@@ -23,8 +23,9 @@ server.ts
 
 ## 🛠 Instalação
 
-```bash
-git clone <repo-url>
+```
+bash
+git clone https://github.com/lucasgby/desafio-backend-valcann.git
 cd project
 npm install
 npm run dev
