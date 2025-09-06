@@ -33,7 +33,12 @@ npm run dev
 
 - O servidor rodará por padrão em http://localhost:3333.
 
-📦 Rotas Disponíveis
+## 📦 Rotas Disponíveis
+
+exemplo de request:
+- http://localhost:3333/users
+- http://localhost:3333/users/page=1&page_size=10&q=bruno
+- http://localhost:3333/users/15
 
 1. GET /users
 Retorna uma lista paginada de usuários.
@@ -69,7 +74,7 @@ Todos os erros passam pelo middleware de erro (errorMiddleware.ts) e seguem o pa
 }
 ```
 
-📝 Observações
+## 📝 Observações
 
 - A API utiliza Zod para validação de parâmetros.
 - Paginação limitada a 50 itens por página.
