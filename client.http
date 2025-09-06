@@ -1,0 +1,19 @@
+# Variables
+@baseUrl = http://localhost:3333
+
+# Health check
+# @name healtCheck
+
+GET {{baseUrl}}/health
+
+###
+
+# Get All Users
+# @name getAllUsers
+GET {{baseUrl}}/users
+
+###
+
+# Get User by Id
+# @name getUserById
+GET {{baseUrl}}/users/10
