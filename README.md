@@ -12,14 +12,14 @@ API simples para gerenciamento de usuários usando dados mock (`mock-users.json`
 
 ## 🚀 Estrutura do Projeto
 
-/controller/ # Camada HTTP: recebe requisições e envia respostas
-/middlewares # Middlewares: logs, tratamento de erros
-/mock # Mock de dados
-/models/ #Modelos, erros customizados e validadores
-/repositories # Acesso aos dados (mock ou DB)
-/routes # Definição das rotas da API
-/services # Regras de negócio
-server.ts
+- /controller/ # Camada HTTP: recebe requisições e envia respostas
+- /middlewares # Middlewares: logs, tratamento de erros
+- /mock # Mock de dados
+- /models/ #Modelos, erros customizados e validadores
+- /repositories # Acesso aos dados (mock ou DB)
+- /routes # Definição das rotas da API
+- /services # Regras de negócio
+- server.ts
 
 ## 🛠 Instalação
 
