@@ -16,7 +16,7 @@ GET {{baseUrl}}/users
 
 # Get All Users With query name
 # @name getAllUsers
-GET {{baseUrl}}/users?page=1&page_size=10&q=bruno
+GET {{baseUrl}}/users?page=1&page_size=5
 
 
 ###

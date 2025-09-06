@@ -1,8 +1,32 @@
-import type{ User } from "./User";
+import type { User } from "./User";
 import users from "../mock/mock-users.json";
+
+interface FilterOptions {
+  q?: string;
+  role?: string;
+  is_active?: boolean;
+}
 
 export class UserRepository {
   private data: User[] = users;
+
+  private filterUsers(users: User[], filters: FilterOptions): User[] {
+    const { q, role, is_active } = filters;
+
+    return users.filter((user) => {
+      const matchesQuery = q
+        ? user.name.toLowerCase().includes(q.toLowerCase()) ||
+        user.email.toLowerCase().includes(q.toLowerCase())
+        : true;
+
+      const matchesRole = role ? user.role === role : true;
+
+      const matchesStatus =
+        typeof is_active === "boolean" ? user.is_active === is_active : true;
+
+      return matchesQuery && matchesRole && matchesStatus;
+    });
+  }
 
   findAll(
     page: number,
@@ -13,22 +37,7 @@ export class UserRepository {
   ): { users: User[]; total: number } {
     let result = [...this.data];
 
-    if (q) {
-      const query = q.toLowerCase();
-
-      result = result.filter((value) =>
-        value.name.toLowerCase().includes(query) ||
-        value.email.toLowerCase().includes(query)
-      );
-    }
-
-    if (role) {
-      result = result.filter((value) => value.role === role);
-    }
-
-    if (typeof is_active === 'boolean') {
-      result = result.filter((status) => status.is_active === is_active);
-    }
+    result = this.filterUsers(result, { q, role, is_active });
 
     const totalRegister = result.length;
     const start = (page - 1) * page_size;
@@ -40,7 +49,7 @@ export class UserRepository {
     }
   }
 
-  findById(id: number) : User | undefined {
+  findById(id: number): User | undefined {
     return this.data.find((user) => user.id === id);
   }
 }
