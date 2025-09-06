@@ -7,7 +7,7 @@ export function errorMiddleware(
   res: Response,
   next: NextFunction
 ) {
-  console.error(err);
+  console.error(err.message);
 
   if (err instanceof ZodError) {
     const messages = err.issues.map((e) => e.message);

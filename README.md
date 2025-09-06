@@ -28,6 +28,9 @@ bash
 git clone https://github.com/lucasgby/desafio-backend-valcann.git
 cd project
 npm install
+
+Criar um arquivo com nome .env e dentro definir a porta de uso PORT= como esta no .env.example
+
 npm run dev
 ```
 
