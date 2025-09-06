@@ -14,6 +14,25 @@ GET {{baseUrl}}/users
 
 ###
 
+# Get All Users With query name
+# @name getAllUsers
+GET {{baseUrl}}/users?page=1&page_size=10&q=bruno
+
+
+###
+
+# Get All Users With query role
+# @name getAllUsers
+GET {{baseUrl}}/users?&role=admin
+
+###
+
+# Get All Users With query active
+# @name getAllUsers
+GET {{baseUrl}}/users?&is_active=false
+
+###
+
 # Get User by Id
 # @name getUserById
 GET {{baseUrl}}/users/10

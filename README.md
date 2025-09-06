@@ -37,6 +37,9 @@ npm run dev
 
 exemplo de request:
 
+OBS: Existe um arquivo client.http onde podesse testar diretamente no Vscode as requisições http sem
+necessidade do Postman ou Insomnia.
+
 ```
 http://localhost:3333/users
 http://localhost:3333/users/page=1&page_size=10&q=bruno
