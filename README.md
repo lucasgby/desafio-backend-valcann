@@ -37,7 +37,7 @@ npm run dev
 
 exemplo de request:
 
-OBS: Existe um arquivo client.http onde podesse testar diretamente no Vscode as requisições http sem
+OBS: Existe o arquivo client.http para realizar testes http diretamente no Vscode
 necessidade do Postman ou Insomnia.
 
 ```
