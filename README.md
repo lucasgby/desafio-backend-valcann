@@ -38,9 +38,9 @@ npm run dev
 exemplo de request:
 
 ```
-- http://localhost:3333/users
-- http://localhost:3333/users/page=1&page_size=10&q=bruno
-- http://localhost:3333/users/15
+http://localhost:3333/users
+http://localhost:3333/users/page=1&page_size=10&q=bruno
+http://localhost:3333/users/15
 ```
 
 1. GET /users
